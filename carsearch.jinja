@@ -1,0 +1,23 @@
+  <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <title>{{ title }}</title>
+  <meta name="description2" content="{{ description }}" />
+</head>
+
+<body>
+
+<div id="content">
+  <p>Local Cars for sale:</p>
+
+  <ul>
+  {% for item in favorites %}
+  <li><a href="{{item.url}}">{{ item.name }}</a> Location: {{item.where}} Has Map: {{item.has_map}} Price:{{item.price}}</li>
+  {% endfor %}
+  </ul>
+</div>
+
+</body>
+</html>
